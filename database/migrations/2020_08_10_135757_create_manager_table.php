@@ -15,7 +15,7 @@ class CreateManagerTable extends Migration
     {
         Schema::create('manager', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nama');
+            $table->string('nama',30);
 
             $table->unsignedBigInteger('proyek_id');
             $table->foreign('proyek_id')->references('id')->on('proyek');

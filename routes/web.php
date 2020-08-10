@@ -11,9 +11,19 @@
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return ('<img src="/public/images/erd.png{{$value->erd.png}}" alt="...">');
 });
+
+Route::get('/master', 'ProyekController@master');
+
+Route::get('/proyek', 'ProyekController@proyek');
+
+
 
 Route::get('/items/create', 'ItemController@create'); // menampilkan halaman form
 Route::post('/items', 'ItemController@store'); // menyimpan data
